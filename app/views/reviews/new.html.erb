@@ -1,0 +1,5 @@
+<%= form_for [@movie, @review] do |f| %>
+  <%= f.label :recommendation %>
+  <%= f.select :recommendation, [['Green light', true], ['Red light', false]] %>
+  <%= f.submit 'Submit Review' %>
+<% end %>

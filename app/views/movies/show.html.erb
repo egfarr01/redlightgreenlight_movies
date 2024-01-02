@@ -1,0 +1,23 @@
+<div class="movie-container">
+  <h2 class="movie-title"><%= @movie.title %></h2>
+  <img class="movie-image" src="<%= @movie.image_url %>" alt="<%= @movie.title %>">
+  <p class="movie-description"><%= @movie.description %></p>
+  
+  
+  <%if @movie.reviews.any? %>
+    
+  
+  <div class="score-bar">
+  <div class="green-score" style="width: <%= @green_lights %>%;">
+    <span class="score-percentage"><%= @green_lights.round %> %</span>
+    <div class="score-label">Green Lights</div>
+  </div>
+  <div class="red-score" style="width: <%= @red_lights %>%;">
+    <span class="score-percentage"><%= @red_lights.round %> %</span>
+    <div class="score-label">Red Lights</div>
+  </div>
+</div>
+<% end %>
+  <p><%= link_to 'Edit', edit_movie_path(@movie) %> | <%= link_to 'Back', movies_path %>  | <%= link_to 'Delete', movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?', turbo: false } %></p>  
+  
+</div>

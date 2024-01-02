@@ -1,0 +1,120 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.movie-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-bottom: 20px;
+}
+
+.movie-item a {
+  text-decoration: none;
+}
+.movie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-thumbnail {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.movie-item h2,
+.movie-item p {
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-form label,
+.search-form input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.search-form input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #2a75f3;
+}
+
+.search-sort-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  margin-right: 10px;
+}
+
+.search-form input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #2a75f3;
+}
+
+.sort-form select {
+  color: #333; /* Darker text color */
+  background: #f0f0f0; /* Light gray background */
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 5px 10px; /* Add some padding */
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+} 
+
+.search-form,
+.sort-form {
+  margin: 10px; /* Adds a 10px margin around each form */
+  height: 40px; /* Sets the height of each form to 40px */
+}
+
+
+
+.sort-form select:hover {
+  background-color: #e0e0e0; /* Slightly darker background when hovered */
+}

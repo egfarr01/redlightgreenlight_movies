@@ -1,0 +1,44 @@
+<div class="search-sort-container">
+<%= form_with url: movies_path, method: :get, local: true, html: { class: "search-form" } do |f| %>
+  <%= f.text_field :search, value: params[:search] %>
+  <%= f.submit 'Search' %>
+<% end %>
+
+<% if params[:search].present? %>
+  <%= link_to 'Back to All Movies', movies_path, class: 'back-link' %>
+<% end %>
+
+<div class="sort-links">
+  <%= form_with url: movies_path, method: :get, local: true, class: "sort-form" do |f| %>
+    <%= f.select :sort, options_for_select([['Sort by Title', 'title'], ['Sort by Most Green Lights', 'green_lights'], ['Sort by Most Red Lights', 'red_lights'], ['Sort by Green/Red Lights Ratio', 'lights_ratio']], params[:sort]), {}, { onchange: 'this.form.submit()' } %>
+  <% end %>
+</div>
+</div>
+<% @movies.each do |movie| %>
+  <%= link_to movie_path(movie) do %>
+    <div class="movie-item">
+      <% if movie.image_url.present? %>
+        <%= image_tag(movie.image_url, alt: movie.title, class: "movie-thumbnail") %> 
+      <% end %>
+      <div class="movie-item-content">
+        <h2><%= movie.title %></h2>
+        <p><%= movie.description %></p>
+        <p class="green"><i class="fas fa-lightbulb"></i>: <%= @green_lights[movie.id] %></p>
+        <p class="red"><i class="fas fa-lightbulb"></i>: <%= @red_lights[movie.id] %></p>
+        <% review = movie.reviews.find_by(user: current_user) %>
+        <% if review %>
+          <p>Your review: 
+          <% if review.recommendation %> 
+            Green Light
+          <% else %>
+            Red Light
+          <% end %>
+          </p>
+        <% else %>
+          <p><%= link_to "Write a review", new_movie_review_path(movie) %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<%= will_paginate @movies %>

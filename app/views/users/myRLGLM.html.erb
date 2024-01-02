@@ -1,0 +1,32 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" id="green-tab" data-toggle="tab" href="#green">My Green Light Movies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="red-tab" data-toggle="tab" href="#red">My Red Light Movies</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="green">
+    <div class="myRLGLM-movie-grid">
+      <% @green_light_movies.each do |movie| %>
+        <div class="myRLGLM-movie-item">
+          <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <div class="myRLGLM-movie-title green-movie"><%= movie.title %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="red">
+    <div class="myRLGLM-movie-grid">
+      <% @red_light_movies.each do |movie| %>
+        <div class="myRLGLM-movie-item">
+          <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <div class="myRLGLM-movie-title red-movie"><%= movie.title %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

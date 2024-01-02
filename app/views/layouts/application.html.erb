@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <title>RedlightgreenlightMovies</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%= csrf_meta_tags %> 
+    <%= csp_meta_tag %> 
+    <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav>
+      <%if user_signed_in? %> 
+        <%= link_to 'Home', root_path %> 
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <%end %> 
+      <% if current_user && current_user.admin? %> 
+        <%= link_to "Add a movie", new_movie_path %> 
+      <% end %>
+      <%= link_to 'My RL/GL Movies', myRLGLM_path %>
+      <h1 class="site-title">
+        <span class="red">Red</span><span class="light">light</span><span class="green">Green</span><span class="light">light</span><span class="movies">Movies</span>
+      </h1>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

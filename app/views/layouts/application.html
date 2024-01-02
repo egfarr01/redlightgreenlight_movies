@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family="Rubik
+    Scribble">
+    <title>RedlightgreenlightMovies</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%= csrf_meta_tags %> <%= csp_meta_tag %> <%= stylesheet_link_tag
+    "application", "data-turbo-track": "reload" %> <%= javascript_importmap_tags
+    %>
+  </head>
+
+  <body>
+    <nav>
+      <%if user_signed_in? %> <%= link_to 'Home', root_path %> <%= link_to
+      'Logout', destroy_user_session_path, method: :delete %> <%end %> <% if
+      current_user && current_user.admin? %> <%= link_to "Add a movie",
+      new_movie_path %> <% end %>
+      <h1 class="site-title">
+        <span class="red">Red</span><span class="light">light</span
+        ><span class="green">green</span><span class="light">light</span
+        ><span class="movies">Movies</span>
+      </h1>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

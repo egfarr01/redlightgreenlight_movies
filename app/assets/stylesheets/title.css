@@ -1,0 +1,35 @@
+
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.site-title {
+  font-family: 'Rubik Scribble';
+  text-align: center;
+  font-size: 4em;
+}
+
+.site-title .red {
+  color: red;
+}
+
+.site-title .green {
+  color: green;
+}
+
+.site-title .light {
+  color: lightgray;
+}
+
+.site-title .movies {
+  color: black;
+}

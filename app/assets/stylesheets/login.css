@@ -1,0 +1,73 @@
+.login-form-title {
+  text-align: center;
+  font-size: 2em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.login-form .field {
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form .field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form .field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.login-form .actions {
+  text-align: center;
+}
+
+.login-form .actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #008000; /* green */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .actions input[type="submit"]:hover {
+  background-color: #006600; /* darker green */
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  padding: 10px 20px;
+}
+
+.checkbox-field input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-form .auth-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0px 0px;
+}
