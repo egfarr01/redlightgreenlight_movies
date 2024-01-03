@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+  margin-right: 0.2em;
+  border-radius: 0.2em;
+}
+
+.pagination .current {
+  background-color: #007BFF;
+  color: white;
+}
+
+.pagination a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.pagination a:hover, .pagination a:focus {
+  background-color: #007BFF;
+  color: white;
+}

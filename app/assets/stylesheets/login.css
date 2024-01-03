@@ -57,12 +57,12 @@
 .checkbox-field {
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  align-items: baseline;
   padding: 10px 20px;
 }
 
 .checkbox-field input[type="checkbox"] {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .login-form .auth-link {

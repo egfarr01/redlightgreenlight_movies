@@ -12,7 +12,9 @@
     <div class="myRLGLM-movie-grid">
       <% @green_light_movies.each do |movie| %>
         <div class="myRLGLM-movie-item">
-          <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <%= link_to movie_path(movie) do %>
+            <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <% end %>
           <div class="myRLGLM-movie-title green-movie"><%= movie.title %></div>
         </div>
       <% end %>
@@ -23,7 +25,9 @@
     <div class="myRLGLM-movie-grid">
       <% @red_light_movies.each do |movie| %>
         <div class="myRLGLM-movie-item">
-          <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <%= link_to movie_path(movie) do %>
+            <%= image_tag(movie.image_url, alt: movie.title, class: "myRLGLM-movie-thumbnail") %>
+          <% end %>
           <div class="myRLGLM-movie-title red-movie"><%= movie.title %></div>
         </div>
       <% end %>
