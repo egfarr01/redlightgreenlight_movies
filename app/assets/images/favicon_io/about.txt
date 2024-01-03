@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Lateef
-- Font Author: Copyright (c) 1994-2023 SIL International.
-- Font Source: http://fonts.gstatic.com/s/lateef/v30/hESw6XVnNCxEvkbMpheEZo_H_w.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+- Font Title: Rock Salt
+- Font Author: Copyright (c) 2010 by Font Diner, Inc DBA Sideshow. All rights reserved.
+- Font Source: http://fonts.gstatic.com/s/rocksalt/v22/MwQ0bhv11fWD6QsAVOZbsEk7hbBWrA.ttf
+- Font License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html))
